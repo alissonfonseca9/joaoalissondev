@@ -6,7 +6,7 @@ window.PORTFOLIO_CONTEUDO = {
     nomeCompleto: 'João Alisson da Silva Fonseca',
     cidade: 'Maceió, AL',
     area: 'Desenvolvimento web',
-    apresentacao: 'Formado em Análise e Desenvolvimento de Sistemas. Desenvolvo aplicações web e atuo com suporte e infraestrutura de TI.',
+    apresentacao: 'Desenvolvo interfaces e aplicações web com foco em experiências claras e problemas reais. Sou formado em Análise e Desenvolvimento de Sistemas e tenho experiência em suporte técnico.',
     email: 'alisson_fonseca1@hotmail.com',
     whatsapp: '5582998025511',
     whatsappExibicao: '(82) 99802-5511',
@@ -18,21 +18,21 @@ window.PORTFOLIO_CONTEUDO = {
     curriculo: './portfolio-media/curriculo-joao-alisson.pdf'
   },
   sobre: {
-    primeiroParagrafo: 'Sou tecnólogo em Análise e Desenvolvimento de Sistemas e trabalho com suporte técnico e infraestrutura. Ao longo dessa trajetória, desenvolvi experiência em diagnóstico, documentação e atendimento a usuários.',
-    segundoParagrafo: 'Também estudo e desenvolvo projetos de software, com interesse em interfaces web, lógica de programação e aplicações que resolvam problemas do dia a dia.',
+    primeiroParagrafo: 'Sou formado em Análise e Desenvolvimento de Sistemas e desenvolvo projetos voltados à web. Gosto de transformar necessidades práticas em interfaces claras e funcionais.',
+    segundoParagrafo: 'Minha experiência em suporte e infraestrutura me ensinou a investigar problemas, ouvir usuários e documentar soluções. Levo essa atenção aos detalhes para cada projeto de desenvolvimento.',
     fatos: [
-      { titulo: 'ADS', linha1: 'Formação superior', linha2: '2019 — 2021' },
-      { titulo: 'TI', linha1: 'Experiência em suporte', linha2: 'e infraestrutura' },
-      { titulo: 'WEB', linha1: 'Projetos e interesse', linha2: 'em desenvolvimento' }
+      { titulo: 'Formação', linha1: 'Análise e Desenvolvimento', linha2: 'de Sistemas' },
+      { titulo: 'Experiência', linha1: 'Suporte técnico', linha2: 'e infraestrutura' },
+      { titulo: 'Foco atual', linha1: 'Projetos web', linha2: 'e desenvolvimento' }
     ]
   },
   habilidades: [
-    { titulo: 'Interfaces web', descricao: 'Criação de interfaces e aplicações para a web.', itens: ['HTML', 'CSS', 'JavaScript', 'React'] },
-    { titulo: 'Programação e dados', descricao: 'Lógica de programação, APIs e bancos de dados.', itens: ['Node.js', 'Python', 'Java', 'C', 'C#', 'SQL', 'MySQL', 'PostgreSQL'] },
+    { titulo: 'Nos meus projetos', descricao: 'Tecnologias utilizadas nas aplicações apresentadas no portfólio.', itens: ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript', 'Firebase', 'NestJS', 'Python'] },
+    { titulo: 'Outros conhecimentos', descricao: 'Linguagens, fundamentos e bancos de dados presentes na minha formação e estudos.', itens: ['Node.js', 'Java', 'C', 'C#', 'SQL', 'MySQL', 'PostgreSQL'] },
     { titulo: 'Suporte e infraestrutura', descricao: 'Diagnóstico de incidentes, sistemas e conectividade.', itens: ['Windows', 'Linux', 'Active Directory', 'Microsoft 365', 'TCP/IP', 'DNS', 'DHCP', 'VPN'] }
   ],
   trajetoria: {
-    introducao: 'Experiência em suporte, atendimento e análise de problemas, com formação em desenvolvimento de sistemas.',
+    introducao: 'Uma trajetória em suporte e tecnologia, com formação em desenvolvimento de sistemas e experiência em análise de problemas e documentação de soluções.',
     destaques: [
       { titulo: '5+ anos', descricao: 'de experiência em suporte técnico N1/N2' },
       { titulo: 'Diagnóstico', descricao: 'investigação de falhas, resolução de incidentes e verificação das soluções' },
