@@ -8,6 +8,8 @@ window.PORTFOLIO_CONTEUDO = {
     area: 'Desenvolvimento web',
     apresentacao: 'Formado em Análise e Desenvolvimento de Sistemas. Desenvolvo aplicações web e atuo com suporte e infraestrutura de TI.',
     email: 'alisson_fonseca1@hotmail.com',
+    whatsapp: '5582998025511',
+    whatsappExibicao: '(82) 99802-5511',
     linkedin: 'https://www.linkedin.com/in/joaoalissondasilvafonseca',
     linkedinNome: 'joaoalissondasilvafonseca',
     instagram: 'https://www.instagram.com/_alissonfonseca/',
