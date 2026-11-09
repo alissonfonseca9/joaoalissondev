@@ -24,6 +24,7 @@
 .contact-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .contact-card{min-width:0;padding:22px;border:1px solid #44624e;border-radius:12px;background:#202e24;color:#f1f8f2}
 .contact-email{grid-column:1/-1;background:#253a2c;border-color:#5d8066}
+.contact-whatsapp{grid-column:1/-1;background:#203629;border-color:#4f785a}
 .contact-card-heading{display:flex;align-items:center;gap:11px}
 .contact-icon{display:grid;flex:none;place-items:center;width:40px;height:40px;border:1px solid #507b5d;border-radius:10px;background:#2c5137;color:#91f0b1}
 .contact-icon svg{width:20px;height:20px}
@@ -38,7 +39,7 @@
 .contact-profile:hover{border-color:#86e8a6;background:#293c2e;transform:translateY(-2px)}
 .contact-profile .contact-value{font-size:15px}.contact-profile-action{display:inline-flex;align-items:center;gap:8px;margin-top:17px;color:#8eecad;font-size:13px;font-weight:700}
 @media(max-width:900px){.contact-inner{grid-template-columns:1fr;gap:28px;padding:70px 0}.contact-intro{max-width:none}.contact-intro p{max-width:520px}}
-@media(max-width:520px){.contact-inner{padding:58px 0}.contact-options{grid-template-columns:1fr;gap:10px}.contact-email{grid-column:auto}.contact-card{padding:19px}.contact-email .contact-value{font-size:18px}.contact-profile .contact-value{margin-top:13px}.contact-profile-action{margin-top:13px}}
+@media(max-width:520px){.contact-inner{padding:58px 0}.contact-options{grid-template-columns:1fr;gap:10px}.contact-email,.contact-whatsapp{grid-column:auto}.contact-card{padding:19px}.contact-email .contact-value{font-size:18px}.contact-profile .contact-value{margin-top:13px}.contact-profile-action{margin-top:13px}}
 /* Navegação, habilidades e atalhos entre as páginas. */
 .top{position:relative}.contact-top{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;white-space:nowrap}
 .social-links a{width:44px;height:44px}.footer{font-size:12px}.about-facts small{font-size:12px}
