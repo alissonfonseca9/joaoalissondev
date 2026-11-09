@@ -10,7 +10,7 @@ Portfólio pessoal com apresentação, habilidades, trajetória profissional e p
 - `codigo-fonte/portfolio-alisson/` contém o projeto do portfólio em React e Vite.
 - `codigo-fonte/forest-react/dist/` e `codigo-fonte/forest-mobile/dist/` contêm as builds das calculadoras usadas ao preparar o site.
 
-Consulte [LEIA-ME-EDICAO.md](LEIA-ME-EDICAO.md) para alterar textos, imagens, contatos e a prévia de compartilhamento.
+Consulte [guia de edição](codigo-fonte/portfolio-alisson/LEIA-ME-EDICAO.md) para alterar textos, imagens, contatos e a prévia de compartilhamento.
 
 ## Executar o projeto React
 
