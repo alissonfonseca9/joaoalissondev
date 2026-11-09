@@ -1,0 +1,33 @@
+Add-Type -AssemblyName System.Drawing
+$bitmap = [System.Drawing.Bitmap]::new(1200, 630)
+$canvas = [System.Drawing.Graphics]::FromImage($bitmap)
+$canvas.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
+$canvas.TextRenderingHint = [System.Drawing.Text.TextRenderingHint]::AntiAliasGridFit
+$canvas.Clear([System.Drawing.ColorTranslator]::FromHtml('#191c1d'))
+$green = [System.Drawing.SolidBrush]::new([System.Drawing.ColorTranslator]::FromHtml('#31d87c'))
+$white = [System.Drawing.SolidBrush]::new([System.Drawing.ColorTranslator]::FromHtml('#f2f7f3'))
+$muted = [System.Drawing.SolidBrush]::new([System.Drawing.ColorTranslator]::FromHtml('#b8c9bd'))
+$panel = [System.Drawing.SolidBrush]::new([System.Drawing.ColorTranslator]::FromHtml('#23372a'))
+$outline = [System.Drawing.Pen]::new([System.Drawing.ColorTranslator]::FromHtml('#45654f'), 2)
+$labelFont = [System.Drawing.Font]::new('Segoe UI', 16, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
+$nameFont = [System.Drawing.Font]::new('Segoe UI', 66, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
+$roleFont = [System.Drawing.Font]::new('Segoe UI', 34, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
+$bodyFont = [System.Drawing.Font]::new('Segoe UI', 24, [System.Drawing.FontStyle]::Regular, [System.Drawing.GraphicsUnit]::Pixel)
+$codeFont = [System.Drawing.Font]::new('Segoe UI', 100, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
+$canvas.FillRectangle($green, 56, 72, 5, 40)
+$canvas.DrawString('PORTFÓLIO  /  TECNOLOGIA', $labelFont, $green, 80, 78)
+$canvas.DrawString('João Alisson', $nameFont, $white, 56, 181)
+$canvas.DrawString('Desenvolvimento web', $roleFont, $green, 60, 290)
+$canvas.DrawString('Projetos, habilidades e trajetória em tecnologia.', $bodyFont, $muted, 60, 365)
+$canvas.FillRectangle($panel, 857, 190, 252, 252)
+$canvas.DrawRectangle($outline, 857, 190, 252, 252)
+$canvas.DrawString('</>', $codeFont, $green, 864, 230)
+$canvas.DrawLine($outline, 60, 519, 1140, 519)
+$canvas.DrawString('github.com/alissonfonseca9', $bodyFont, $muted, 60, 546)
+$canvas.Dispose()
+$output = Join-Path $PSScriptRoot '..\public\portfolio-media\compartilhamento.png'
+$bitmap.Save($output, [System.Drawing.Imaging.ImageFormat]::Png)
+$bitmap.Dispose()
+$green.Dispose(); $white.Dispose(); $muted.Dispose(); $panel.Dispose(); $outline.Dispose()
+$labelFont.Dispose(); $nameFont.Dispose(); $roleFont.Dispose(); $bodyFont.Dispose(); $codeFont.Dispose()
+Write-Output $output
