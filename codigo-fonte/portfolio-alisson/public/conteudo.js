@@ -104,8 +104,8 @@ window.PORTFOLIO_CONTEUDO = {
       solucao: 'Cadastro de serviços, consulta de disponibilidade, reserva de horários e painel para acompanhar atendimentos.',
       participacao: 'Desenvolvimento da interface web e integração com uma API e banco de dados.',
       tecnologias: ['React', 'Node.js', 'Express', 'PostgreSQL'],
-      imagens: [{ arquivo: './portfolio-media/agenda-real-cliente.png', titulo: 'Página do cliente — captura real' }, { arquivo: './portfolio-media/agenda-real-admin.png', titulo: 'Painel administrativo — captura real' }, { arquivo: './portfolio-media/agenda-1.svg', titulo: 'Página de agendamento — ilustração' }, { arquivo: './portfolio-media/agenda-2.svg', titulo: 'Escolha de data e horário — ilustração' }, { arquivo: './portfolio-media/agenda-3.svg', titulo: 'Acesso à conta — ilustração' }, { arquivo: './portfolio-media/agenda-4.svg', titulo: 'Painel do negócio — ilustração' }],
-      link: 'https://github.com/alissonfonseca9/AgendaClara', textoLink: 'Ver repositório', externo: true, observacao: 'Capturas reais e imagens ilustrativas da interface.'
+      imagens: [{ arquivo: './portfolio-media/agenda-real-cliente.png', titulo: 'Página do cliente — captura real' }, { arquivo: './portfolio-media/agenda-real-admin.png', titulo: 'Painel administrativo — captura real' }],
+      link: 'https://github.com/alissonfonseca9/AgendaClara', textoLink: 'Ver repositório', externo: true, observacao: 'Capturas reais da interface.'
     }
   ]
 };
