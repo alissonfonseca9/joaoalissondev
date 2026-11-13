@@ -144,3 +144,5 @@ body::after{inset:0;background-image:radial-gradient(circle,rgba(150,226,176,.24
 @keyframes grid-breathe{from{opacity:.2}to{opacity:.46}}
 @media(max-width:600px){.ambient-orbit-one{width:420px;height:420px;right:-220px;top:8%}.ambient-orbit-two{width:280px;height:280px;right:-130px;top:19%}.ambient-grid{height:45%;opacity:.24}.ambient-sparks{opacity:.22}}
 @media(prefers-reduced-motion:reduce){.ambient-background *{animation:none!important}}
+
+.contact-form{display:grid;gap:14px;margin-top:20px}.contact-form label{display:grid;gap:7px;color:#d5eadb;font-size:13px;font-weight:700}.contact-form input,.contact-form textarea{width:100%;padding:12px;border:1px solid #66816d;border-radius:8px;background:#18291e;color:#fff;font:inherit}.contact-form textarea{resize:vertical}.contact-form input:focus-visible,.contact-form textarea:focus-visible{outline:2px solid #76ecaa;outline-offset:2px}.contact-form button{justify-self:start}
