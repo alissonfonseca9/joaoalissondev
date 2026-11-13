@@ -2,17 +2,6 @@ const fs=require('fs');
 const path=require('path');
 const vm=require('vm');
 
-// As calculadoras continuam autônomas em suas respectivas pastas.
-function single(dir){
- let html=fs.readFileSync(path.join(dir,'index.html'),'utf8');
- html=html.replace(/<script type="module" crossorigin src="([^"]+)"><\/script>/,(_,src)=>'<script type="module">'+fs.readFileSync(path.join(dir,src.replace(/^\//,'')),'utf8').replace(/<\/script/gi,'<\\/script')+'</script>');
- html=html.replace(/<link rel="stylesheet" crossorigin href="([^"]+)">/,(_,src)=>'<style>'+fs.readFileSync(path.join(dir,src.replace(/^\//,'')),'utf8')+'</style>');
- if(html.includes('src="/assets/')||html.includes('href="/assets/'))throw Error('Dependência local das calculadoras não incorporada');
- return html;
-}
-const desktop=single('../forest-react/dist');
-const mobile=single('../forest-mobile/dist');
-
 // O Vite gera um único pacote sem imports externos; um script clássico permite
 // que as páginas sejam abertas por arquivo local e também em hospedagem estática.
 let template=fs.readFileSync('dist/index.html','utf8');
@@ -46,10 +35,4 @@ for(const [name,title,description] of pages){
  fs.writeFileSync(path.join('dist',name),html);
  fs.writeFileSync(path.join(out,name),html);
 }
-for(const [name,html] of [['projeto',desktop],['projeto-mobile',mobile]]){
- for(const root of ['dist',out]){
-  fs.mkdirSync(path.join(root,name),{recursive:true});
-  fs.writeFileSync(path.join(root,name,'index.html'),html);
- }
-}
-console.log('Cinco páginas e as duas calculadoras prontas para hospedagem.');
+console.log('Cinco páginas prontas para hospedagem.');

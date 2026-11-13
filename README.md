@@ -8,7 +8,7 @@ Portfólio pessoal com apresentação, habilidades, trajetória profissional e p
 - `conteudo.js` reúne os textos, os contatos, os projetos e os destaques da página inicial.
 - `portfolio-media/` contém as imagens, o currículo e a imagem de compartilhamento.
 - `codigo-fonte/portfolio-alisson/` contém o projeto do portfólio em React e Vite.
-- `codigo-fonte/forest-react/dist/` e `codigo-fonte/forest-mobile/dist/` contêm as builds das calculadoras usadas ao preparar o site.
+- As calculadoras Forest Shuffle são acessadas pelos links externos indicados em `conteudo.js`.
 
 Consulte [guia de edição](codigo-fonte/portfolio-alisson/LEIA-ME-EDICAO.md) para alterar textos, imagens, contatos e a prévia de compartilhamento.
 
