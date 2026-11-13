@@ -57,10 +57,30 @@ function ContactIcon({type}){
  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
 }
 function ContactSection(){
+ const [sendStatus,setSendStatus]=useState('');
+ const [sending,setSending]=useState(false);
+ async function sendMessage(event){
+  event.preventDefault();
+  if(sending)return;
+  const form=event.currentTarget;
+  setSending(true);
+  setSendStatus('');
+  try{
+   const response=await fetch('https://formsubmit.co/ajax/'+encodeURIComponent(email),{method:'POST',headers:{Accept:'application/json'},body:new FormData(form)});
+   const result=await response.json();
+   if(!response.ok||String(result.success)!=='true')throw new Error('Falha no envio');
+   form.reset();
+   setSendStatus('Mensagem enviada! Obrigado pelo contato.');
+  }catch{
+   setSendStatus('Não foi possível enviar. Tente novamente ou entre em contato pelo WhatsApp.');
+  }finally{
+   setSending(false);
+  }
+ }
  return <section id="contato" className="contact-section" aria-labelledby="contact-title"><div className="shell contact-inner">
   <div className="contact-intro"><div className="kicker"><span>05</span> / VAMOS CONVERSAR</div><h2 id="contact-title">Entre em contato<span>.</span></h2><p>Para conversar sobre projetos e oportunidades, escolha a melhor forma de falar comigo.</p></div>
   <div className="contact-options">
-   <article className="contact-card contact-email"><div className="contact-card-heading"><span className="contact-icon"><ContactIcon type="email"/></span><span className="contact-label">Envie uma mensagem</span></div><form className="contact-form" action={'https://formsubmit.co/'+email} method="POST"><input type="hidden" name="_subject" value="Nova mensagem pelo portfólio"/><label>Seu nome<input name="name" autoComplete="name" required /></label><label>Seu e-mail<input type="email" name="email" autoComplete="email" required /></label><label>Mensagem<textarea name="message" rows="5" required /></label><button type="submit" className="contact-action contact-action-primary">Enviar mensagem <span aria-hidden="true">→</span></button></form></article>
+   <article className="contact-card contact-email"><div className="contact-card-heading"><span className="contact-icon"><ContactIcon type="email"/></span><span className="contact-label">Envie uma mensagem</span></div><form className="contact-form" onSubmit={sendMessage} action={'https://formsubmit.co/'+email} method="POST"><input type="hidden" name="_subject" value="Nova mensagem pelo portfólio"/><label>Seu nome<input name="name" autoComplete="name" required /></label><label>Seu e-mail<input type="email" name="email" autoComplete="email" required /></label><label>Mensagem<textarea name="message" rows="5" required /></label><button type="submit" className="contact-action contact-action-primary" disabled={sending}>{sending?'Enviando…':'Enviar mensagem'} <span aria-hidden="true">→</span></button><p className="contact-form-status" role="status" aria-live="polite">{sendStatus}</p></form></article>
    <article className="contact-card contact-whatsapp"><div className="contact-card-heading"><span className="contact-icon"><ContactIcon type="whatsapp"/></span><span className="contact-label">WhatsApp</span></div><span className="contact-value">{perfil.whatsappExibicao}</span><div className="contact-actions"><a className="contact-action contact-action-primary" href={'https://wa.me/'+perfil.whatsapp} target="_blank" rel="noopener noreferrer">Conversar no WhatsApp <span aria-hidden="true">↗</span></a></div></article>
    <a className="contact-card contact-profile" href={linkedin} target="_blank" rel="noopener noreferrer"><span className="contact-card-heading"><span className="contact-icon"><ContactIcon type="linkedin"/></span><span className="contact-label">LinkedIn</span></span><span className="contact-value">{perfil.linkedinNome}</span><span className="contact-profile-action">Ver perfil <Arrow/></span></a>
    <a className="contact-card contact-profile" href={instagram} target="_blank" rel="noopener noreferrer"><span className="contact-card-heading"><span className="contact-icon"><ContactIcon type="instagram"/></span><span className="contact-label">Instagram</span></span><span className="contact-value">{perfil.instagramNome}</span><span className="contact-profile-action">Ver perfil <Arrow/></span></a>
