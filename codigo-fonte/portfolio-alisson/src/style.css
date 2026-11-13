@@ -148,3 +148,18 @@ body::after{inset:0;background-image:radial-gradient(circle,rgba(150,226,176,.24
 .contact-form{display:grid;gap:14px;margin-top:20px}.contact-form label{display:grid;gap:7px;color:#d5eadb;font-size:13px;font-weight:700}.contact-form input,.contact-form textarea{width:100%;padding:12px;border:1px solid #66816d;border-radius:8px;background:#18291e;color:#fff;font:inherit}.contact-form textarea{resize:vertical}.contact-form input:focus-visible,.contact-form textarea:focus-visible{outline:2px solid #76ecaa;outline-offset:2px}.contact-form button{justify-self:start}
 
 .contact-form-status:empty{display:none}.contact-form-status{margin:0;color:#d5f4de;font-size:13px;line-height:1.5}.contact-form button:disabled{opacity:.7;cursor:wait}
+
+/* Lista de projetos */
+.project-overview{gap:0;margin-bottom:32px;border-top:1px solid rgba(167,205,177,.19)}
+.project-overview-card{position:relative;min-height:104px;padding:12px 14px;border:0;border-bottom:1px solid rgba(167,205,177,.19);border-radius:0;background:transparent;transition:background .18s}
+.project-overview-card:hover{background:rgba(143,202,161,.06)}
+.project-overview-card.active{background:rgba(143,202,161,.09)}
+.project-overview-card.active::before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:3px;border-radius:3px;background:#69d594}
+.project-overview-card:focus-visible{outline:2px solid #8be7aa;outline-offset:-2px}
+.project-overview-card img{position:static;width:112px;height:78px;align-self:center;border-radius:5px;object-fit:cover;object-position:top}
+.project-overview-content{padding:6px 18px;row-gap:5px}
+.project-overview-content small{color:#a5c2ad;font-size:10px;letter-spacing:.08em}
+.project-overview-content strong{font-size:16px;line-height:1.3}
+.project-overview-content span{color:#acc1b2;font-size:12px}
+.project-overview-content b{color:#a8d9b5;font-size:12px;font-weight:600}
+@media(max-width:520px){.project-overview{gap:0}.project-overview-card{min-height:96px;padding:12px 8px}.project-overview-card img{position:static;width:76px;height:70px}.project-overview-content{display:grid;grid-template-columns:minmax(0,1fr) auto;padding:2px 0 2px 12px;gap:4px 8px}.project-overview-content strong{font-size:14px}.project-overview-content small{font-size:10px}.project-overview-content span{font-size:11px}.project-overview-content b{grid-column:2;grid-row:1 / 4;font-size:11px;white-space:normal;text-align:right;max-width:65px}}
