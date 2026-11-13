@@ -63,7 +63,7 @@ window.PORTFOLIO_CONTEUDO = {
       participacao: 'Desenvolvimento da interface e da lógica de organização e pontuação da aplicação.',
       tecnologias: ['React', 'JavaScript', 'HTML', 'CSS'],
       imagens: [{ arquivo: './portfolio-media/forest-real-1.png', titulo: 'Floresta e pontuação no computador' }, { arquivo: './portfolio-media/forest-real-4.png', titulo: 'Catálogo e jogadores no computador' }],
-      link: 'https://forestshufflecounter.netlify.app/', textoLink: 'Explorar o projeto', externo: false, observacao: 'Capturas reais da aplicação.'
+      link: 'https://forestshufflecounter.netlify.app/', textoLink: 'Explorar o projeto', externo: true, observacao: 'Capturas reais da aplicação.'
     },
     {
       id: 'forest-mobile', nomeCurto: 'Forest Mobile', titulo: 'Forest Shuffle Mobile', categoria: 'APLICAÇÃO MOBILE',
@@ -73,7 +73,7 @@ window.PORTFOLIO_CONTEUDO = {
       participacao: 'Adaptação da interface e da navegação para celular, a partir da calculadora principal.',
       tecnologias: ['React', 'JavaScript', 'HTML', 'CSS'],
       imagens: [{ arquivo: './portfolio-media/forest-real-2.png', titulo: 'Floresta no celular' }, { arquivo: './portfolio-media/forest-real-3.png', titulo: 'Pontuação no celular' }],
-      retrato: true, link: 'https://forestshufflecountermobile.netlify.app/', textoLink: 'Abrir versão mobile', externo: false, observacao: 'Capturas reais da aplicação.'
+      retrato: true, link: 'https://forestshufflecountermobile.netlify.app/', textoLink: 'Abrir versão mobile', externo: true, observacao: 'Capturas reais da aplicação.'
     },
     {
       id: 'login', nomeCurto: 'Login', titulo: 'Login & autenticação', categoria: 'APLICAÇÃO WEB',
