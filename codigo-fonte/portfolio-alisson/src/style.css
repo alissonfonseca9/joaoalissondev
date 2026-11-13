@@ -163,3 +163,25 @@ body::after{inset:0;background-image:radial-gradient(circle,rgba(150,226,176,.24
 .project-overview-content span{color:#acc1b2;font-size:12px}
 .project-overview-content b{color:#a8d9b5;font-size:12px;font-weight:600}
 @media(max-width:520px){.project-overview{gap:0}.project-overview-card{min-height:96px;padding:12px 8px}.project-overview-card img{position:static;width:76px;height:70px}.project-overview-content{display:grid;grid-template-columns:minmax(0,1fr) auto;padding:2px 0 2px 12px;gap:4px 8px}.project-overview-content strong{font-size:14px}.project-overview-content small{font-size:10px}.project-overview-content span{font-size:11px}.project-overview-content b{grid-column:2;grid-row:1 / 4;font-size:11px;white-space:normal;text-align:right;max-width:65px}}
+
+/* Contato */
+.contact-options{gap:0;border-top:1px solid rgba(167,205,177,.19)}
+.contact-card,.contact-email,.contact-whatsapp{padding:24px 14px;border:0;border-bottom:1px solid rgba(167,205,177,.19);border-radius:0;background:transparent}
+.contact-icon{width:36px;height:36px;border-color:rgba(167,205,177,.2);border-radius:7px;background:rgba(143,202,161,.07);color:#9bd3a9}
+.contact-icon svg{width:18px;height:18px}
+.contact-label{color:#c4d9ca;font-size:13px}
+.contact-form{gap:16px;margin-top:22px}
+.contact-form label{color:#c4d9ca;font-size:13px;font-weight:600}
+.contact-form input,.contact-form textarea{padding:12px 13px;border-color:rgba(167,205,177,.3);border-radius:6px;background:rgba(10,24,16,.35);color:#f1f8f2;font-size:16px}
+.contact-form input:hover,.contact-form textarea:hover{border-color:#86ad91}
+.contact-form input:focus-visible,.contact-form textarea:focus-visible{border-color:#8be7aa;outline:2px solid #8be7aa;outline-offset:2px}
+.contact-action{border-radius:6px}
+.contact-action-primary{background:#83dba1;border-color:#83dba1;color:#102819}
+.contact-action-primary:hover{background:#a4e9ba}
+.contact-whatsapp .contact-value{margin-top:15px}
+.contact-profile{padding-top:22px;padding-bottom:22px}
+.contact-profile:nth-child(3){border-right:1px solid rgba(167,205,177,.19)}
+.contact-profile:hover{background:rgba(143,202,161,.06);transform:none}
+.contact-profile .contact-value{font-size:14px}
+.contact-profile-action{margin-top:12px;color:#a8d9b5;font-size:12px}
+@media(max-width:520px){.contact-options{gap:0}.contact-card,.contact-email,.contact-whatsapp{padding:20px 8px}.contact-profile:nth-child(3){border-right:0}.contact-form{gap:14px}.contact-form button{width:100%}}
