@@ -1,0 +1,15 @@
+# Arquivos gerados para distribuição não entram na estatística de linguagens.
+/assets/** linguist-generated
+/codigo-fonte/forest-react/dist/** linguist-generated
+/codigo-fonte/forest-mobile/dist/** linguist-generated
+/index.html linguist-generated
+/projetos.html linguist-generated
+/sobre.html linguist-generated
+/habilidades.html linguist-generated
+/trajetoria.html linguist-generated
+
+# O código-fonte do portfólio deve ser analisado mesmo quando contém linhas longas.
+/codigo-fonte/portfolio-alisson/src/main.jsx -linguist-generated linguist-language=JavaScript
+/codigo-fonte/portfolio-alisson/src/style.css -linguist-generated
+/codigo-fonte/portfolio-alisson/index.html -linguist-generated
+/codigo-fonte/portfolio-alisson/public/conteudo.js -linguist-generated
