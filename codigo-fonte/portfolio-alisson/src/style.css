@@ -187,3 +187,7 @@ body::after{inset:0;background-image:radial-gradient(circle,rgba(150,226,176,.24
 @media(max-width:520px){.contact-options{gap:0}.contact-card,.contact-email,.contact-whatsapp{padding:20px 8px}.contact-profile:nth-child(3){border-right:0}.contact-form{gap:14px}.contact-form button{width:100%}}
 
 .contact-section{background:rgba(23,37,29,.3)}
+
+/* Cor dos botões principais */
+.primary,.project-link,.contact-action-primary,.project-picker button.active{background:#26cc70;border-color:#26cc70;color:#102819}
+.primary:hover,.project-link:hover,.contact-action-primary:hover,.project-picker button.active:hover{background:#53dd90;border-color:#53dd90;color:#102819}
