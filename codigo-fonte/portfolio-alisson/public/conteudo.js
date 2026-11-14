@@ -57,9 +57,9 @@ window.PORTFOLIO_CONTEUDO = {
   projetos: [
     {
       id: 'forest-shuffle', nomeCurto: 'Forest Shuffle', titulo: 'Forest Shuffle Score Counter', categoria: 'JOGO & FERRAMENTA',
-      descricao: 'Uma calculadora interativa para organizar cartas e acompanhar a pontuação do jogo. A aplicação considera posições, símbolos e combinações entre as cartas de cada floresta.',
-      desafio: 'Facilitar a contagem de pontos em uma partida com cartas cujos valores dependem de outras cartas e posições.',
-      solucao: 'Organização visual por árvores, registro das cartas jogadas e cálculo das combinações e pontuações.',
+      descricao: 'Calculadora de pontuação para Forest Shuffle. Permite montar a floresta, registrar cartas ao redor das árvores e acompanhar os pontos de cada jogador.',
+      desafio: 'Traduzir uma pontuação que depende das espécies, dos símbolos e da posição das cartas em uma interface fácil de consultar.',
+      solucao: 'Catálogo por posição, florestas individuais, contagem da caverna e explicação dos pontos calculados.',
       participacao: 'Desenvolvimento da interface e da lógica de organização e pontuação da aplicação.',
       tecnologias: ['React', 'JavaScript', 'HTML', 'CSS'],
       imagens: [{ arquivo: './portfolio-media/forest-real-1.png', titulo: 'Floresta e pontuação no computador' }, { arquivo: './portfolio-media/forest-real-4.png', titulo: 'Catálogo e jogadores no computador' }],
@@ -67,9 +67,9 @@ window.PORTFOLIO_CONTEUDO = {
     },
     {
       id: 'forest-mobile', nomeCurto: 'Forest Mobile', titulo: 'Forest Shuffle Mobile', categoria: 'APLICAÇÃO MOBILE',
-      descricao: 'Versão para celular da calculadora, com navegação por toque entre floresta, cartas, pontuação e jogadores.',
+      descricao: 'Versão para celular da calculadora Forest Shuffle, com acesso por toque à floresta, ao catálogo, aos pontos e aos jogadores.',
       desafio: 'Adaptar a montagem da floresta e a consulta da pontuação a uma tela menor.',
-      solucao: 'Navegação por abas e controles adaptados ao toque para organizar cartas, jogadores e pontos.',
+      solucao: 'Abas para alternar entre as etapas e seleção de cartas adaptada a telas menores.',
       participacao: 'Adaptação da interface e da navegação para celular, a partir da calculadora principal.',
       tecnologias: ['React', 'JavaScript', 'HTML', 'CSS'],
       imagens: [{ arquivo: './portfolio-media/forest-real-2.png', titulo: 'Floresta no celular' }, { arquivo: './portfolio-media/forest-real-3.png', titulo: 'Pontuação no celular' }],
@@ -77,9 +77,9 @@ window.PORTFOLIO_CONTEUDO = {
     },
     {
       id: 'login', nomeCurto: 'Login', titulo: 'Login & autenticação', categoria: 'APLICAÇÃO WEB',
-      descricao: 'Aplicação com cadastro, entrada por e-mail ou Google, recuperação de senha e área protegida. O projeto integra autenticação Firebase a uma API NestJS.',
-      desafio: 'Organizar o acesso de usuários com diferentes formas de autenticação e uma área protegida.',
-      solucao: 'Interface em React integrada ao Firebase e a uma API para consultar dados do usuário autenticado.',
+      descricao: 'Aplicação de autenticação com cadastro, login por e-mail ou Google, recuperação de senha e painel protegido.',
+      desafio: 'Integrar diferentes formas de autenticação e proteger o acesso aos dados do usuário.',
+      solucao: 'React e Firebase Authentication cuidam do acesso; um token é enviado à API NestJS para consultar o usuário autenticado.',
       participacao: 'Desenvolvimento da interface e da integração com autenticação e API.',
       tecnologias: ['React', 'TypeScript', 'Firebase', 'NestJS'],
       imagens: [{ arquivo: './portfolio-media/login-1.svg', titulo: 'Tela de entrada' }, { arquivo: './portfolio-media/login-2.svg', titulo: 'Cadastro' }, { arquivo: './portfolio-media/login-3.svg', titulo: 'Recuperação de senha' }, { arquivo: './portfolio-media/login-4.svg', titulo: 'Área do usuário' }],
@@ -89,20 +89,20 @@ window.PORTFOLIO_CONTEUDO = {
     },
     {
       id: 'gamesettings', nomeCurto: 'GameSettings', titulo: 'GameSettings', categoria: 'FERRAMENTA DESKTOP',
-      descricao: 'Ferramenta em Python que identifica componentes e jogos instalados para sugerir configurações gráficas de acordo com o hardware e um banco de dados editável.',
+      descricao: 'Ferramenta de linha de comando em Python que identifica hardware e jogos para sugerir configurações gráficas.',
       desafio: 'Ajudar na escolha de configurações gráficas considerando os componentes do computador e os jogos instalados.',
-      solucao: 'Identificação de hardware e jogos, com consulta a um banco editável de recomendações.',
+      solucao: 'Consulta a perfis editáveis de jogos e GPUs para sugerir ajustes conforme resolução e prioridade de desempenho, equilíbrio ou qualidade.',
       participacao: 'Desenvolvimento da ferramenta em Python e organização das regras de recomendação.',
       tecnologias: ['Python', 'JSON', 'Windows', 'CLI'],
       imagens: [{ arquivo: './portfolio-media/game-1.svg', titulo: 'Detecção de hardware' }, { arquivo: './portfolio-media/game-2.svg', titulo: 'Jogos instalados' }, { arquivo: './portfolio-media/game-3.svg', titulo: 'Recomendações gráficas' }, { arquivo: './portfolio-media/game-4.svg', titulo: 'Relatório' }],
-      link: 'https://github.com/alissonfonseca9/gamesettings', textoLink: 'Ver repositório', externo: true, observacao: 'Imagens ilustrativas da ferramenta.'
+      link: 'https://github.com/alissonfonseca9/gamesettings', textoLink: 'Ver repositório', externo: true, observacao: 'Imagens ilustrativas. As recomendações são estimativas e não alteram os jogos automaticamente.'
     },
     {
       id: 'agenda-clara', nomeCurto: 'Agenda Clara', titulo: 'Agenda Clara', categoria: 'APLICAÇÃO WEB',
-      descricao: 'Aplicação de agendamento para pequenos negócios, com serviços, consulta de horários, reservas e painel administrativo para acompanhar atendimentos.',
-      desafio: 'Organizar os horários de atendimento e facilitar as reservas de clientes em pequenos negócios.',
-      solucao: 'Cadastro de serviços, consulta de disponibilidade, reserva de horários e painel para acompanhar atendimentos.',
-      participacao: 'Desenvolvimento da interface web e integração com uma API e banco de dados.',
+      descricao: 'Sistema de agendamento para pequenos negócios, com catálogo de serviços, reserva de horários e painel administrativo.',
+      desafio: 'Exibir horários disponíveis conforme a duração dos serviços e evitar reservas sobrepostas.',
+      solucao: 'A API calcula a disponibilidade por data e serviço, verifica conflitos nas reservas e permite ao administrador acompanhar e cancelar atendimentos.',
+      participacao: 'Desenvolvimento da interface em React e integração com API em Node.js e Express e banco PostgreSQL.',
       tecnologias: ['React', 'Node.js', 'Express', 'PostgreSQL'],
       imagens: [{ arquivo: './portfolio-media/agenda-real-cliente.png', titulo: 'Página do cliente — captura real' }, { arquivo: './portfolio-media/agenda-real-admin.png', titulo: 'Painel administrativo — captura real' }],
       link: 'https://github.com/alissonfonseca9/AgendaClara', textoLink: 'Ver repositório', externo: true, observacao: 'Capturas reais da interface.'
