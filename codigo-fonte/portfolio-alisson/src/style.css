@@ -191,3 +191,13 @@ body::after{inset:0;background-image:radial-gradient(circle,rgba(150,226,176,.24
 /* Cor dos botões principais */
 .primary,.project-link,.contact-action-primary,.project-picker button.active{background:#26cc70;border-color:#26cc70;color:#102819}
 .primary:hover,.project-link:hover,.contact-action-primary:hover,.project-picker button.active:hover{background:#53dd90;border-color:#53dd90;color:#102819}
+
+/* Confirmação do formulário */
+.contact-success-dialog{width:min(420px,calc(100% - 32px));max-width:none;padding:32px;border:1px solid #52725c;border-radius:14px;background:#182a20;color:#f1f8f2;text-align:center;box-shadow:0 24px 80px #0009}
+.contact-success-dialog::backdrop{background:rgba(3,12,7,.78)}
+.contact-success-icon{display:grid;place-items:center;width:52px;height:52px;margin:0 auto 18px;border-radius:50%;background:#26cc70;color:#102819;font-size:28px;font-weight:700}
+.contact-success-dialog h2{margin:0 0 10px;color:#f1f8f2;font-size:24px;line-height:1.25}
+.contact-success-dialog p{margin:0;color:#c4d9ca;font-size:15px;line-height:1.6}
+.contact-success-dialog form{margin-top:24px}
+.contact-success-dialog button{min-width:120px}
+@media(max-width:520px){.contact-success-dialog{padding:26px 22px}.contact-success-dialog button{width:100%}}

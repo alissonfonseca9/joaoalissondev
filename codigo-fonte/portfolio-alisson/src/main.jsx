@@ -59,6 +59,7 @@ function ContactIcon({type}){
 function ContactSection(){
  const [sendStatus,setSendStatus]=useState('');
  const [sending,setSending]=useState(false);
+ const successDialog=useRef(null);
  async function sendMessage(event){
   event.preventDefault();
   if(sending)return;
@@ -71,6 +72,7 @@ function ContactSection(){
    if(!response.ok||String(result.success)!=='true')throw new Error('Falha no envio');
    form.reset();
    setSendStatus('Mensagem enviada! Obrigado pelo contato.');
+   successDialog.current?.showModal();
   }catch{
    setSendStatus('Não foi possível enviar. Tente novamente ou entre em contato pelo WhatsApp.');
   }finally{
@@ -85,6 +87,7 @@ function ContactSection(){
    <a className="contact-card contact-profile" href={linkedin} target="_blank" rel="noopener noreferrer"><span className="contact-card-heading"><span className="contact-icon"><ContactIcon type="linkedin"/></span><span className="contact-label">LinkedIn</span></span><span className="contact-value">{perfil.linkedinNome}</span><span className="contact-profile-action">Ver perfil <Arrow/></span></a>
    <a className="contact-card contact-profile" href={instagram} target="_blank" rel="noopener noreferrer"><span className="contact-card-heading"><span className="contact-icon"><ContactIcon type="instagram"/></span><span className="contact-label">Instagram</span></span><span className="contact-value">{perfil.instagramNome}</span><span className="contact-profile-action">Ver perfil <Arrow/></span></a>
   </div>
+  <dialog ref={successDialog} className="contact-success-dialog" aria-labelledby="contact-success-title" aria-describedby="contact-success-description"><div className="contact-success-icon" aria-hidden="true">✓</div><h2 id="contact-success-title">Mensagem enviada!</h2><p id="contact-success-description">Obrigado pelo contato. Sua mensagem foi enviada com sucesso.</p><form method="dialog"><button type="submit" className="contact-action contact-action-primary" autoFocus>Fechar</button></form></dialog>
  </div></section>
 }
 function HomeHighlights(){const featured=conteudo.projetosDestaque.map(id=>projects.find(project=>project.id===id)).filter(Boolean);return <section className="home-highlights section shell" aria-labelledby="highlights-title"><div className="highlights-heading"><div><div className="kicker">PROJETOS EM DESTAQUE</div><h2 id="highlights-title">Ideias em prática<span>.</span></h2><p>Conheça alguns dos projetos que desenvolvi.</p></div><a className="highlights-all" href="./projetos.html">Ver todos os projetos <span aria-hidden="true">→</span></a></div><div className="highlight-grid">{featured.map(project=><a className="highlight-card" key={project.id} href={'./projetos.html#'+project.id}><div className="highlight-image"><img src={project.images[0].src} alt={project.images[0].title+' — '+project.title} width="1000" height="700" loading="lazy"/></div><div className="highlight-copy"><span>{project.category}</span><h3>{project.title}</h3><p>{project.description}</p><b>Ver detalhes <span aria-hidden="true">↗</span></b></div></a>)}</div></section>}
