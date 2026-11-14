@@ -4,7 +4,7 @@ import './style.css';
 
 const conteudo=window.PORTFOLIO_CONTEUDO;
 const {perfil,sobre,trajetoria}=conteudo;
-const developerIllustration='./portfolio-media/developer-illustration-enviada.png';
+const developerIllustration='./portfolio-media/developer-illustration-loiro.png';
 const {email,linkedin,instagram,github}=perfil;
 const skillGroups=conteudo.habilidades;
 function Arrow(){return <span aria-hidden="true">↗</span>}
